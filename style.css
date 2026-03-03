@@ -50,9 +50,13 @@ body {
 }
 
 .logo {
-    font-weight: 600;  /* Semi-bold */
-    font-size: 18px;   /* Slightly bigger text */
+    text-decoration: none;   /* removes underline */
+    color: var(--text);      /* matches theme text */
+    font-weight: 700;        /* bold */
+    font-size: 20px;         /* slightly larger */
+    letter-spacing: 2px;     /* makes it feel branded */
 }
+
 
 .nav-links a {
     margin-left: 35px;      /* Space between links */
@@ -240,4 +244,20 @@ form button {
 .social-icons img:hover {
     opacity: 1;
     transform: translateY(-3px);
+}
+
+/* //////////// */
+.resume-btn {
+    padding: 6px 14px;
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.resume-btn:hover {
+    background: var(--accent);
+    color: black;
 }
