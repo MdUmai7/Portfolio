@@ -1,0 +1,243 @@
+/* ================= THEME VARIABLES ================= */
+
+/* :root means global variables */
+/* using --bg as  */
+:root {
+    --bg: #0f0f0f;        /* Background color */
+    --text: #f2f2f2;      /* Main text color */
+    --card: #151515;      /* Card background */
+    --border: #2a2a2a;    /* Border color */
+    --accent: #ff7a1a;    /* Orange accent color */
+    --text-secondary: #9a9a9a;   /* Dark mode softer text */
+}
+
+/* When body has class "light", these values override above */
+body.light {
+--bg: #f4f1ee;    --text: #111111;
+    --card: #f4f4f4;
+    --border: #dddddd;
+    --text-secondary: #555555;   /* Darker gray in light mode */
+}
+
+/* ================= RESET ================= */
+
+/* Removes default browser spacing */
+* {
+    margin: 0;          /* Removes default outer spacing */
+    padding: 0;         /* Removes default inner spacing */
+    box-sizing: border-box;  /* Makes width include padding & border */
+}
+
+/* Main body styling */
+body {
+    font-family: 'Segoe UI', sans-serif; /* Clean modern font */
+    background: var(--bg);               /* Uses background variable */
+    color: var(--text);                  /* Uses text variable */
+    transition: background 0.3s ease, color 0.3s ease; /* Smooth theme change */
+}
+
+/* ================= HEADER ================= */
+
+.header {
+    position: fixed;         /* Stays at top while scrolling */
+    top: 0;                  /* Stick to top */
+    width: 100%;             /* Full width */
+    padding: 20px 80px;      /* Top/Bottom 20px, Left/Right 80px */
+    display: flex;           /* Enables flexbox */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center;     /* Vertically center items */
+    background: var(--bg);   /* Same as body background */
+}
+
+.logo {
+    font-weight: 600;  /* Semi-bold */
+    font-size: 18px;   /* Slightly bigger text */
+}
+
+.nav-links a {
+    margin-left: 35px;      /* Space between links */
+    text-decoration: none;  /* Removes underline */
+    color: #888;            /* Light gray */
+    transition: 0.3s;       /* Smooth hover */
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent);   /* Turns orange on hover or active */
+}
+
+/* ================= TOGGLE BUTTON ================= */
+
+#theme-toggle {
+    background: none;           /* No background */
+    border: 1px solid var(--border); /* Thin border */
+    color: var(--text);         /* Matches theme text */
+    padding: 6px 12px;          /* Inner spacing */
+    border-radius: 20px;        /* Rounded shape */
+    cursor: pointer;            /* Pointer on hover */
+    transition: 0.3s;
+}
+
+#theme-toggle:hover {
+    border-color: var(--accent); /* Border turns orange */
+    color: var(--accent);        /* Text turns orange */
+}
+
+/* ================= SECTION ================= */
+
+.section {
+    max-width: 900px;  /* Prevents content from stretching too wide */
+    margin: 0 auto;    /* Centers content horizontally */
+    padding: 160px 20px 100px; /* Top padding makes space for fixed header */
+    text-align: center; /* Center text */
+}
+
+/* ================= HERO ================= */
+
+.section h1 {
+    font-size: 48px;  /* Large heading */
+    margin-bottom: 12px; /* Space below heading */
+}
+
+.subtitle {
+    color: var(--accent); /* Orange subtitle */
+    margin-bottom: 50px;
+}
+
+/* ================= PROFILE IMAGE ================= */
+
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes image circular */
+    object-fit: cover;  /* Prevents distortion */
+    margin-bottom: 50px;
+}
+
+/* ================= ABOUT ================= */
+
+.about {
+    color: var(--text-secondary);
+    line-height: 1.8;     /* Improves readability */
+    max-width: 650px;     /* Limits paragraph width */
+    margin: 0 auto 70px;  /* Centers and adds bottom spacing */
+}
+
+/* ================= SKILLS ================= */
+
+.skills-section {
+    margin-bottom: 100px;
+}
+
+.skills-title {
+    margin-bottom: 40px;
+    color: var(--accent); /* Orange heading */
+}
+
+.skills-grid {
+    display: grid; /* Enables grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    /* Auto adjusts columns based on screen size */
+    gap: 20px;       /* Space between skill cards */
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    padding: 18px 0;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--card);
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    border-color: var(--accent); /* Border turns orange */
+    color: var(--accent);        /* Text turns orange */
+    transform: translateY(-4px); /* Moves slightly up */
+}
+
+/* ================= PROJECTS ================= */
+
+.projects-container {
+    margin-top: 60px;
+    display: grid;
+    gap: 30px;
+}
+
+.project-card {
+    padding: 35px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--card);
+    text-align: left;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    border-color: var(--accent);
+}
+
+.project-card h3 {
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #aaa;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+/* ================= CONTACT ================= */
+
+form {
+    margin-top: 50px;
+}
+
+form input {
+    width: 300px;
+    padding: 12px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+form input:focus {
+    border-color: var(--accent); /* Border orange when clicked */
+    outline: none;               /* Removes default blue outline */
+}
+
+form button {
+    margin-top: 18px;
+    padding: 10px 22px;
+    border: none;
+    background: var(--accent);
+    color: black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ================= SOCIAL ICONS ================= */
+
+.social-icons {
+    margin-top: 60px;
+}
+
+.social-icons img {
+    width: 26px;
+    margin: 0 14px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.social-icons img:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+}
