@@ -274,81 +274,80 @@ form button {
 }
 
 /* ========================= */
-/* TABLET */
-/* ========================= */
+/* Mobile navbar */
+@media (max-width: 768px){
 
-@media (max-width: 1024px) {
-
-.hero h1{
-    font-size: 42px;
-}
-
-.hero p{
-    width: 90%;
-}
-
-.skills-container{
-    grid-template-columns: repeat(3,1fr);
-}
-
-}
-
-/* ========================= */
-/* MOBILE */
-/* ========================= */
-
-@media (max-width: 768px) {
-
-/* reduce navbar spacing */
 .nav-links{
-    gap: 20px;
+    gap:16px; /* reduce spacing */
+    font-size:14px;
 }
 
-/* hero text smaller */
+.resume-btn{
+    display:none; /* hide resume button on mobile */
+}
+
+.logo{
+    font-size:18px;
+}
+
+}
+
+@media (max-width:768px){
+
+.hero{
+    padding-top:90px;
+    padding-bottom:40px;
+}
+
 .hero h1{
-    font-size: 32px;
+    font-size:30px;
 }
 
 .hero .role{
-    font-size: 16px;
+    font-size:14px;
 }
 
-/* profile image smaller */
-.profile-img{
-    width: 140px;
-    height: 140px;
-}
-
-/* paragraph width full */
 .hero p{
-    width: 95%;
-    font-size: 14px;
+    font-size:14px;
+    line-height:1.6;
+    width:90%;
 }
 
-/* skills grid smaller */
+.profile-img{
+    width:120px;
+    height:120px;
+}
+
+}
+
+@media (max-width:768px){
+
 .skills-container{
-    grid-template-columns: repeat(2,1fr);
-    gap: 15px;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
 }
 
-/* project cards spacing */
-.project-card{
-    padding: 20px;
+.skill-box{
+    padding:10px;
+    font-size:13px;
 }
 
 }
 
-@media (max-width: 480px){
-
-.hero h1{
-    font-size: 26px;
+.social-icons{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    margin-top:30px;
 }
 
-.nav-links{
-    display:none;
+.social-icons img{
+    width:22px;
 }
 
-/* optional hamburger later */
-
+section{
+    padding-bottom:40px;
 }
+
+
 
