@@ -272,3 +272,83 @@ form button {
 .resume-btn:hover {
     box-shadow: 0 0 0 3px rgba(255, 136, 0, 0.15);
 }
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (max-width: 1024px) {
+
+.hero h1{
+    font-size: 42px;
+}
+
+.hero p{
+    width: 90%;
+}
+
+.skills-container{
+    grid-template-columns: repeat(3,1fr);
+}
+
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+/* reduce navbar spacing */
+.nav-links{
+    gap: 20px;
+}
+
+/* hero text smaller */
+.hero h1{
+    font-size: 32px;
+}
+
+.hero .role{
+    font-size: 16px;
+}
+
+/* profile image smaller */
+.profile-img{
+    width: 140px;
+    height: 140px;
+}
+
+/* paragraph width full */
+.hero p{
+    width: 95%;
+    font-size: 14px;
+}
+
+/* skills grid smaller */
+.skills-container{
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+}
+
+/* project cards spacing */
+.project-card{
+    padding: 20px;
+}
+
+}
+
+@media (max-width: 480px){
+
+.hero h1{
+    font-size: 26px;
+}
+
+.nav-links{
+    display:none;
+}
+
+/* optional hamburger later */
+
+}
+
